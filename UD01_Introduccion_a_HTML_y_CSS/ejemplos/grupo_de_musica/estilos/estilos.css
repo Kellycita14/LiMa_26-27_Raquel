@@ -1,0 +1,39 @@
+html{
+    background-color: pink;
+}
+
+/*header{
+    background-color: rgb(240, 174, 184);
+}*/
+
+header > h1{
+    background-color: rgb(204, 125, 219, 0.5);
+    padding: 15px;
+    border: 1px solid lavender;
+    border-radius: 15px;
+}
+
+section{
+    background-color: rgb(204, 125, 219, 0.5);
+    padding: 20px;
+    border: 1px solid lavender;
+    border-radius: 15px;
+}
+
+strong{
+    background-color: rgb(204, 125, 219);
+}
+
+aside{
+    background-color: rgba(204, 125, 219, 0.5);
+    padding-left: 15px;
+    border: 1px solid lavender;
+    border-radius: 15px;
+}
+
+footer{
+    background-color: rgba(204, 125, 219, 0.5);
+    padding-left: 15px;
+    border: 1px solid lavender;
+    border-radius: 15px;
+}
