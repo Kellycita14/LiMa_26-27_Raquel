@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Raquel"/>
+        <meta name="description" content="html"/>
+        <meta name="keywords" content="html"/>
+        <title>Formulario con estilos</title>
+        <style>
+            input:required:valid{
+                background-color: green;
+                border: 1px solid green;
+            }
+
+            input:required:invalid{
+                background-color: red;
+                border: 1px solid red;
+            }
+
+            input:optional:valid{
+                background-color: transparent;
+                border: 1px solid green;
+            }
+
+            input:optional:invalid{
+                background-color: transparent;
+                border: 1px solid red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form method="post" action="">
+            <label for="name">Nome: </label>
+            <br/>
+            <input type="text" id="name" required="required" minlength="3" maxlength="30" pattern="[A-ZÁÉÍÓÚ][A-Za-zÁÉÍÓÚáéíóúñ \-]*"/>
+            <br/>
+            <br/>
+            <label for="surname">Apelidos: </label>
+            <br/>
+            <input type="text" id="surname" required="required" minlength="3" maxlength="50" pattern="[A-ZÁÉÍÓÚ][A-Za-zÁÉÍÓÚáéíóúñ \-]*"/>
+            <br/>
+            <br/>
+            <label for="email">Correo electrónico: </label>
+            <br/>
+            <input type="email" id="email" required="required" pattern="[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}"/>
+            <br/>
+            <br/>
+            <label for="age">Idade: </label>
+            <br/>
+            <input type="number" id="age" required="required" min="16" max="99"/>
+            <br/>
+            <br/>
+            <label for="phone">Teléfono: </label>
+            <br/>
+            <input type="text" id="phone" pattern="[0-9]{9}"/>
+            <br/>
+            <br/>
+            <label for="postcode">Código postal: </label>
+            <br/>
+            <input type="text" id="postcode" required="required" pattern="[0-9]{5}"/>
+            <br/>
+            <br/>
+            <label for="siblings">Número de irmáns: </label>
+            <br/>
+            <input type="number" id="siblings" min="0" max="15"/>
+            <br/>
+            <br/>
+            <label for="web">Páxina web persoal: </label>
+            <br/>
+            <input type="url" id="web" pattern="http[s]?://[A-Za-z0-9.\-]+\.[A-Za-z]{2,}(/\S*)?"/>
+            <br/>
+            <br/>
+            <input type="submit" value="Enviar"/>
+            <input type="reset" value="Restablecer"/>
+        </form>
+    </body>
+</html>

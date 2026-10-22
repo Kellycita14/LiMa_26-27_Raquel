@@ -1,0 +1,42 @@
+body{
+	background-color: turquoise;	
+}
+
+body > ol > li {
+	list-style-type: square;
+}
+
+body > ol > ol > ol > li{
+	list-style-type: none ;
+}
+
+a[href]{
+	text-decoration: none;
+}
+
+a[href]:hover{
+	text-decoration: none;
+}
+
+a[href]:active{
+	color: yellow;
+}
+
+body > ol > li > a:hover{
+	background-color: pink;
+}
+
+body > ol > ol > li > a:hover{
+	background-color: gray;
+}
+
+body > ol > ol > ol > li > a:hover{
+	background-color: gray;
+}
+
+a[href]{
+	display: inline-block;
+}
+a[href]::first-letter{
+	font-size: 2em;
+}
