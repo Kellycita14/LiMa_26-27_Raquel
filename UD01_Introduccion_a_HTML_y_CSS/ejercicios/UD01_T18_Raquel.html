@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Raquel" />
+    <meta name="description" content="html" />
+    <meta name="keywords" content="html" />
+    <title>Formulario con estilos II</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+        .lobster-two-regular {
+            font-family: "Lobster Two", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .lobster-two-bold {
+            font-family: "Lobster Two", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .lobster-two-regular-italic {
+            font-family: "Lobster Two", sans-serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .lobster-two-bold-italic {
+            font-family: "Lobster Two", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        body{
+            font-family: "Lobster Two";
+        }
+
+        h2 {
+            color: blueviolet;
+            text-shadow: 0.25em 0.25em 0.25em purple;
+        }
+
+        legend {
+            color: blueviolet;
+            text-shadow: 0.25em 0.25em 0.25em purple;
+        }
+
+        fieldset {
+            border: 1px solid #aaa;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        input{
+            font-family: "Lobster Two";
+        }
+
+        textarea{
+            font-family: "Lobster Two";
+        }
+
+        .phone{
+            width: 180px;
+        }
+
+         .age{
+            width: 112px;
+        }
+
+        input,
+        textarea {
+            background-color: #eeeeee;
+            border: none;
+        }
+
+        input:required,
+        textarea:required {
+            background-color: #e3edfb;
+        }
+
+        input:valid,
+        textarea:valid {
+            background-color: #dff5df;
+            color: #14571e;
+        }
+
+        input:invalid,
+        textarea:invalid {
+            background-color: #fbe0e0;
+            color: #8b1a1a;
+        }
+
+        input:focus,
+        textarea:focus {
+            border: 2px solid #1a56db;
+            color: #0b2a7a;
+        }
+
+        .oculto {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+        }
+
+        .boton_archivo {
+            display: inline-block;
+            padding: 2px 8px;
+            background: #eeeeee;
+            border: 1px solid #aaa;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<h2>Inscripción al "Taller Tecnológico"</h2>
+
+<body>
+    <main>
+        <form method="post" action="#">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <label for="name">Nombre (obligatorio): </label>
+                <input type="text" id="name" name="nombre" placeholder="Escriba aquí su nombre" required="required"
+                    minlenght="3" maxlength="40" pattern="[A-Za-zÁÉÍÓÚÜáéíóúüÑñ ]{3, 40}" />
+                <br />
+                <br />
+                <label for="surname">Apellidos (obligatorio): </label>
+                <input type="text" id="surname" name="apellidos" placeholder="Escriba aquí sus apellidos"
+                    required="required" minlenght="3" maxlength="60" pattern="[A-Za-zÁÉÍÓÚÜáéíóúüÑñ ]{3, 40}" />
+                <br />
+                <br />
+                <label for="password">Contraseña (obligatoria): </label>
+                <input type="password" id="pass" name="contraseña" placeholder="Escriba aquí su contraseña"
+                    required="required" minlenght="8" maxlength="20" pattern="(?=.*[A-Za-z])(?=.*[0-9]).{8,20}" />
+                <br />
+                <br />
+                <label for="email">Correo electrónico (obligatorio): </label>
+                <input type="email" id="email" name="correo_electronico" placeholder="Escriba aquí su email"
+                    required="required" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
+                <br />
+                <br />
+                <label for="phone">Teléfono (opcional): </label>
+                <input type="tel" id="phone" class="phone" name="telefono" placeholder="Escriba aquí su número de teléfono"
+                    required="optional" pattern="[0-9]{9}" />
+                <br />
+                <br />
+                <label for="date">Fecha de nacimiento (obligatoria): </label>
+                <input type="date" id="date" name="fecha" required="required" min="1950-01-01" max="2010-12-31" />
+                <br />
+                <br />
+                <label for="age">Edad (obligatoria): </label>
+                <input type="number" id="age" class="age" name="edad" placeholder="Entre 14 y 100 años" required="required" min="14" max="100" />
+                <br />
+                <br />
+                <label for="workshop">Buscar un taller (opcional): </label>
+                <input type="search" id="workshop" name="buscar" placeholder="Buscar..." required="optional" />
+                <br />
+            </fieldset>
+            <br />
+
+            <fieldset>
+                <legend>Inscripción</legend>
+                <label for="date_of_inscription">Fecha de inscripción (obligatoria): </label>
+                <input type="datetime-local" id="date_of_inscription" name="fecha_inscripcion" required="required" />
+                <br />
+                <br />
+                <label for="favorite_month">Mes preferido (opcional): </label>
+                <input type="month" id="favorite_month" name="mes_favorito" required="optional" min="2027-01"
+                    max="2027-12" />
+                <br />
+                <br />
+                <label for="week">Semana preferida (opcional): </label>
+                <input type="week" id="week" name="semana_preferida" required="optional" min="2027-W01"
+                    max="2027-W52" />
+                <br />
+                <br />
+                <label for="time">Hora preferida (obligatoria, de 09:00 a 20:00): </label>
+                <input type="time" id="time" name="hora" required="required" min="09:00" max="20:00" />
+                <br />
+                <br />
+                <label for="mode">Modalidad (obligatoria): </label>
+                <input type="radio" id="in_person" name="modalidad" required="required" value="presencial" />
+                <label for="in_person">Presencial</label>
+                <input type="radio" id="online" name="modalidad" required="required" value="online" />
+                <label for="online">Online</label>
+                <br />
+                <br />
+                <label for="workshop_of_interest">Talleres de interés (opcional):</label>
+                <input type="checkbox" id="programming-t" name="talleres" value="programacion" />
+                <label for="programming-t">Programación</label>
+                <input type="checkbox" id="networks-t" name="talleres" value="redes" />
+                <label for="networks-t">Redes</label>
+                <input type="checkbox" id="design-t" name="talleres" value="diseno-web" />
+                <label for="design-t">Diseño web</label>
+                <br />
+                <br />
+                <label for="sessions">Número de sesiones (1-10):</label>
+                <input type="range" id="sessions" name="sesiones" min="1" max="10" value="5" />
+                <br />
+                <br />
+                <label for="document">Documento identificativo en PDF (opcional):</label>
+                <input type="file" id="document" name="documento" accept=".pdf,application/pdf" class="oculto"
+                    value="Seleccionar archivo" />
+                <label for="document" class="boton_archivo">Seleccionar archivo</label>
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend>Información adicional</legend>
+                <label for="web">Página web personal (opcional):</label>
+                <input type="url" id="web" name="web" placeholder="https://www.ejemplo.com">
+                <br />
+                <br />
+                <label for="invitation">Código de invitación (opcional):</label>
+                <input type="text" id="invitation" name="invitacion" placeholder="Ej: AR14" minlength="4" maxlength="8"
+                    pattern="[A-Za-z0-9]{4,8}" />
+                <br />
+                <br />
+                <label for="color">Color preferido:</label>
+                <input type="color" id="color" name="color" value="#7a1fd1" />
+                <br />
+                <br />
+                <label for="comments">Comentarios (opcional, máximo 300 caracteres):</label>
+                <br />
+                <textarea id="comments" name="comentarios" rows="4" cols="50" maxlength="300"
+                    placeholder="Escriba aquí sus comentarios"></textarea>
+            </fieldset>
+            <br />
+            <input type="button" value="Consultar disponibilidad" />
+            <input type="submit" value="Enviar inscripción" />
+            <input type="reset" value="Restablecer" />
+            </fieldset>
+            <br />
+        </form>
+    </main>
+</body>
+
+</html>
