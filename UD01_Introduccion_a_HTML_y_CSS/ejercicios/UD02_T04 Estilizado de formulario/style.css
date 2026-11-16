@@ -1,0 +1,61 @@
+:root {
+    --fondo-gris-azulado: #5b6d82;
+    --fondo-tarjeta-section: #f2f8fc;
+    --color-h3: #2eb5e5;
+    --borde-rojo: salmon;
+    --borde-gris: #7a8691;
+    --borde-verde: palegreen;
+}
+
+main {
+    margin: 0 auto;
+}
+
+body {
+    background-color: var(--fondo-gris-azulado);
+    display: flex;
+}
+
+section {
+    background-color: var(--fondo-tarjeta-section);
+    border-radius: 10px;
+    padding: 25px;
+    width: 95%;
+    display: inline-block;
+    border-left: 2px solid;
+    margin-top: 30px;
+    border: 1px solid var(--fondo-tarjeta-section);
+}
+
+h3 {
+    color: var(--color-h3);
+    font-family: Arial, 'sans-serif';
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+input {
+    display: inline-block;
+    border-left: 4px solid var(--borde-gris);
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 5px 5px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px 20px;
+}
+
+input:required:invalid {
+    border-left-color: var(--borde-rojo);
+    background-image: url("img/tnt.png");
+}
+
+input:required:valid {
+    border-left-color: var(--borde-verde);
+    background-image: url("img/check.png");
+}
+
+input:required:invalid:focus {
+    box-shadow: 0 0 0 2px;
+}
