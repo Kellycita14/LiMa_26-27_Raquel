@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Raquel"/>
+        <meta name="description" content="html"/>
+        <meta name="keywords" content="html"/>
+        <style>
+            :root{
+                --color-fondo-titulos: rgb(0, 0, 0);
+                --color-texto-titulos: rgb(255, 255, 255);
+                --tipo-letra: 'Arial', 'sans-serif';
+                --tamaño-letra: 1em;
+            }
+
+            body{
+                display: flex;
+                box-sizing: border-box;
+            }
+
+            .marco{
+                position: relative;
+                display: inline-block;
+            }
+
+            .marco img{
+                width: 400px;
+                margin: 10px;
+                border: 1px solid red;
+            }
+
+            .top{
+                background-color: var(--color-fondo-titulos);
+                color: var(--color-texto-titulos);
+                font-family: var(--tipo-letra);
+                font-size: var(--tamaño-letra);
+                padding: 5px;
+                top: 15px;
+                left: 25px;
+                text-align: left;
+                width: 365px;
+                position: absolute;
+            }
+
+            .bottom{
+                background-color: var(--color-fondo-titulos);
+                color: var(--color-texto-titulos);
+                font-family: var(--tipo-letra);
+                font-size: var(--tamaño-letra);
+                padding: 5px;
+                top: 255px;
+                left: 25px;
+                text-align: right;
+                width: 365px;
+                position: absolute;
+            }
+
+            .left{
+                background-color: var(--color-fondo-titulos);
+                color: var(--color-texto-titulos);
+                font-family: var(--tipo-letra);
+                font-size: var(--tamaño-letra);
+                letter-spacing: 15px;
+                padding: 5px;
+                top: 20px;
+                left: 10px;
+                bottom: 10px;
+                width: 20px;
+                height: 270px;
+                position: absolute;
+                writing-mode: vertical-lr;
+                text-orientation: upright;
+            }
+
+            .right{
+                background-color: var(--color-fondo-titulos);
+                color: var(--color-texto-titulos);
+                font-family: var(--tipo-letra);
+                font-size: var(--tamaño-letra);
+                padding: 5px;
+                width: 20px;
+                height: 270px;
+                top: 20px;
+                right: 10px;
+                bottom: 10px;
+                position: absolute;
+                writing-mode: vertical-rl;
+                text-orientation: sideways;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="marco">
+            <img src="https://picsum.photos/400/301">
+            <h2 class="top">Título 1</h2>
+        </div>
+
+        <div class="marco">
+            <img src="https://picsum.photos/400/302">
+            <h2 class="bottom">Título 2</h2>
+        </div>
+
+        <div class="marco">
+            <img src="https://picsum.photos/400/303">
+            <h2 class="left">Título 3</h2>
+        </div>
+
+        <div class="marco">
+            <img src="https://picsum.photos/400/304">
+            <h2 class="right">Título 4</h2>
+        </div>
+    </body>
+</html>
